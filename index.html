@@ -11,22 +11,23 @@
 <body>
     <div class="one">
         <div class="input">
-            <p>Input</p>
             <div id="box" draggable="false"></div>
-        
-        </div>
-
-        <div class="middle">
+            <div id="legend">
+                <div id="grad"></div>
+                <div id="scale">
+                    <p id="scale_number">255</p>
+                    <p id="scale_number">128</p>
+                    <p id="scale_number">0</p>
+                </div>
+            </div>
             
-            <div id="grad"></div>
-            <p style='font-size:40px'>=></p>
-        
         </div>
 
         <div class="output">
-            <p>Output</p>
-            <div id="outputText" draggable="false"></div>
-        
+            <div id="result">
+                <p id="titleResult">OUTPUT</p>
+                <div id="outputText" draggable="false"></div>
+            </div>
         </div>
     </div>
     <script src="./../js/display.js"></script>

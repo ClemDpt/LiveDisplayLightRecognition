@@ -5,7 +5,7 @@ const outputText = document.querySelector("#outputText");
 let output = "0";
 let lightIntensity = 48;
 let lightTreshold = 100;
-let data = [120,110,150,20,150,40,10,170,30];
+let data = [220,210,250,20,250,40,10,230,30];
 
 
 function displayArray() { 
@@ -17,7 +17,8 @@ function displayArray() {
         for (let j=0; j<=2; j++){
             lightIntensity = data[k];
             
-            txt += '<div id="boxes" style="background-color:rgb(' + lightIntensity + ', ' + lightIntensity +', ' + lightIntensity + ');"></div>';
+            txt += '<p id="boxes" style="background-color:rgb(' + lightIntensity + ', 0, ' + (255-lightIntensity) + '); font-size:25px;color:white">' + lightIntensity + '</p>';
+            
             k++;
         }
         
@@ -54,7 +55,7 @@ function inputArrayToTextOutput() {
 }
 
 function textOutput() {
-    let txt = "<p style='font-size:40px'>";
+    let txt = "<p id='outputResult'style='font-size:75px; color:white'>";
     txt += output;
     txt += "</p>";
     outputText.innerHTML = txt;
