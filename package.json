@@ -1,0 +1,19 @@
+{
+    "name": "basic-socket",
+    "version": "0.0.1",
+    "description": "Communication between Arduino and HTML/JavaScript using Node.Js",
+    "type": "module",
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "express": "^4.18.2",
+        "serialport": "^10.5.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.21.4",
+        "@babel/preset-env": "^7.21.4",
+        "@types/serialport": "^8.0.2",
+        "babel-loader": "^9.1.2",
+        "webpack": "^5.79.0",
+        "webpack-cli": "^5.0.1"
+    }
+}
