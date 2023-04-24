@@ -15,7 +15,7 @@ function fetchData() {
         finalData = data.trim().split(" ").map(val => parseInt(val));
         // Calibration of the data
         for (let i = 0; i < finalData.length; i++) {
-            finalData[i] = finalData[i] / 2;
+            finalData[i] = finalData[i]*3;
           }
       })
       .catch(error => {
@@ -47,7 +47,7 @@ function inputDataToTextOutput() {
     for (let i=0; i<finalData.length; i++){ 
         if (finalData[i] >= lightTreshold)
             dataBin += "1";
-        else if (data[i] < lightTreshold)
+        else if (finalData[i] < lightTreshold)
             dataBin += "0";
     }
     // Letter recognition
