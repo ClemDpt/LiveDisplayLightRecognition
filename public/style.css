@@ -4,19 +4,22 @@
     width: 50vw;
 }
 
-body{
+html, body{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgb(25, 25, 25);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .one{
     text-align: center;
-    width:80%;
-    height:100%;
-    margin-top : 75px;
+    width:70%;
+    height:fit-content;
     display: flex;
     flex-direction: row;
     justify-content: center;
