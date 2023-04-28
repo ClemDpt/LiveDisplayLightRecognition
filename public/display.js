@@ -15,7 +15,35 @@ function fetchData() {
         finalData = data.trim().split(" ").map(val => parseInt(val));
         // Calibration of the data
         for (let i = 0; i < finalData.length; i++) {
-            finalData[i] = finalData[i]*3;
+            switch(i){
+                case 0: 
+                    finalData[i] = Math.floor(finalData[i]*3.7);
+                    break;
+                case 1:
+                    finalData[i] = Math.floor(finalData[i]*3.2);
+                    break;
+                case 2:
+                    finalData[i] = Math.floor(finalData[i]*3.9);
+                    break;
+                case 3:
+                    finalData[i] = Math.floor(finalData[i]*5.7);
+                    break;
+                case 4:
+                    finalData[i] = Math.floor(finalData[i]*3.7);
+                    break;
+                case 5:
+                    finalData[i] = Math.floor(finalData[i]*3.3);
+                    break;
+                case 6:
+                    finalData[i] = Math.floor(finalData[i]*6.8);
+                    break;
+                case 7:
+                    finalData[i] = Math.floor(finalData[i]*3.3);
+                    break;
+                case 8:
+                    finalData[i] = Math.floor(finalData[i]*4.1);
+                    break;
+            }
           }
       })
       .catch(error => {
@@ -93,7 +121,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         displayArray();
         inputDataToTextOutput();
         textOutput();
-    }, 500);
+    }, 50); // Refresh rate
 });
 
 

@@ -25,12 +25,10 @@ port.on('open', function(err) {
     let inputData = '';
     port.on('data', function(data) {
       inputData += data.toString('utf8');
-      setTimeout(() => {
-        if (inputData != ''){
-          globalData = inputData;
-        }
-        inputData = '';
-      }, 500); // Refresh rate 
+      parser.write(inputData); // Pass the incoming data to the parser
+    });
+    parser.on('data', function(parsedData) {
+      globalData = parsedData; // Update the globalData variable with parsed data
       //console.log(globalData);
     });
     if(err) {
